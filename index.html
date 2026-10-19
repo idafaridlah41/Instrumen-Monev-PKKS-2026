@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="doc-title">Aplikasi Monev SPMI, PKKS & Kinerja BKN 2026</title>
+    <title id="doc-title">Aplikasi Monev PKKS SMP 2026</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
         
@@ -121,7 +121,7 @@
 
         @media print {
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-            header, .json-btns, .btn-action, button, #toast, .school-header, #identity-card-section, #quarter-info-banner, #filter-comp, #search-box, .analytics-grid, .draft-option-container { display: none !important; }
+            header, footer, .json-btns, .btn-action, button, #toast, .school-header, #identity-card-section, #quarter-info-banner, #filter-comp, #search-box, .analytics-grid, .draft-option-container { display: none !important; }
             body, main, .card { background: white !important; color: black !important; padding: 0 !important; margin: 0 !important; border: none !important; box-shadow: none !important; width: 100% !important; }
             @page { margin: 10mm; }
             .print-header { display: block !important; margin-bottom: 15px; border-bottom: 2px solid #1e1b4b; padding-bottom: 10px; }
@@ -644,6 +644,19 @@
                 <p>Aplikasi mengkalkulasikan persimpangan Praktik Kinerja dan Perilaku Kinerja pada Matriks Kuadran BKN secara realtime untuk memunculkan Predikat Kinerja Akhir.</p>
             </div>
         </div>
+
+        <!-- FOOTER APLIKASI -->
+        <footer style="text-align: center; padding: 20px 10px; color: #64748b; font-size: 11px; border-top: 1px solid #e2e8f0; margin-top: 40px; line-height: 1.6;">
+            <p style="font-style: italic; font-weight: 600; color: #334155; margin-bottom: 2px;">
+                "Melayani dengan empati, mengevaluasi dengan data, meningkatkan mutu tanpa henti."
+            </p>
+            <p style="font-style: italic; color: #475569; margin-bottom: 8px;">
+                Bersama mewujudkan sekolah berkualitas, inklusif, dan membahagiakan.
+            </p>
+            <p style="font-size: 10px; color: #94a3b8; font-weight: 500;">
+                © 2026 Aplikasi Monev SPMI & PKKS • Dikembangkan oleh <strong style="color: #4f46e5;">IFS</strong>
+            </p>
+        </footer>
     </main>
 
     <div id="toast" class="hidden">💾 Data berhasil disimpan!</div>
@@ -653,7 +666,7 @@
         let selectedSchoolId = 1;
         let isDraftMode = false;
         let isDarkMode = false;
-        const STORAGE_KEY = "MONEV_SPMI_PKKS_2026_OFFLINE_V16";
+        const STORAGE_KEY = "MONEV_SPMI_PKKS_2026_OFFLINE_V17";
 
         const initialSchoolNames = [
             "SMPN 3 Tarogong Kidul", "SMPN 2 Cigedug", "SMPN 1 Tarogong Kidul", "SMPN 1 Cisompet", "SMPN 2 Cisompet",
@@ -669,7 +682,7 @@
             "Soleh Syahrul Mubarok, S.Pd.", "Saepuloh, S.Pd.I", "Dewi Sartika, S.Pd.", "Eko Prasetyo, M.Pd.", "H. Asep Saepullah, M.Pd."
         ];
 
-        const defaultPengawasName = "Ida Faridlah Sulaeman.";
+        const defaultPengawasName = "I. Faridlah Sulaeman.";
 
         const masterBerakhlak = [
             { no: 1, key: "pelayanan", title: "Berorientasi Pelayanan", desc: "Memahami dan memenuhi kebutuhan warga sekolah serta memberikan pelayanan prima." },
